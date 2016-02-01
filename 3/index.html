@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Задание №3</title>
+	<meta name="viewport" content="width=device-width">
+	<!-- 26 минут -->
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+			background-color: #fff;
+		}
+		.container {
+			margin: 0 auto;
+			background-color: #f0f0f0;
+		}
+		.version {
+			display: none;
+		}
+		@media handheld and (orientation: portrait),
+				screen and (max-width:620px){
+			.container {
+				width: 420px;
+			}
+			.version_420 {
+				display: block;
+			}
+		}
+		@media handheld and (orientation: landscape) and (min-width:621px) and (max-width: 1060px),
+			screen and (orientation: portrait) and (min-width:621px) and (max-width: 1060px),
+			screen and (min-width:621px) and (max-width: 1060px) {
+			.container {
+				width: 960px;
+			}
+			.version_960 {
+				display: block;
+			}
+		}
+		@media screen and (orientation: landscape) and (min-width: 1061px),
+				screen and (min-width:1061px) {
+			.container {
+				width: 1280px;
+			}
+			.version_1280 {
+				display: block;
+			}
+		}
+		@media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 1061px),
+				only screen and (min--moz-device-pixel-ratio: 1.5) and (min-width: 1061px),
+				only screen and (min-device-pixel-ratio: 1.5) and (min-width: 1061px) {
+			.container {
+				width: 1280px;
+			}
+			.version_1280 {
+				display: none;
+			}
+			.version_1280r {
+				display: block;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="version version_420">Версия 420</div>
+		<div class="version version_960">Версия 960</div>
+		<div class="version version_1280">Версия 1280</div>
+		<div class="version version_1280r">Версия 1280 ретина</div>
+	</div>
+</body>
+</html>
